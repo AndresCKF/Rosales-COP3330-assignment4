@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+    main()
+    start()
+}
+class AppController{
+    addList()
+    removeList()
+    saveList()
+    saveAll()
+    loadList()
+
+}
+class csvHandler {
+    + readCSV(filename)
+    + writeCSV(List)
+    + createFile(filename)
+}
+App -- AppController
+AppController -- csvHandler
+@enduml
