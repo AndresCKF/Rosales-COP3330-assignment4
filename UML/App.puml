@@ -13,6 +13,18 @@ class AppController{
     loadList()
 
 }
+class TODO{
+    +String dueDate
+    +String description
+    +char status
+    +setDueDate
+    +setDescription
+    +setStatus
+    +getDueDate
+    +getDescription
+    +getStatus
+}
+
 class csvHandler {
     + readCSV(filename)
     + writeCSV(List)
@@ -20,4 +32,5 @@ class csvHandler {
 }
 App -- AppController
 AppController -- csvHandler
+csvHandler -- ToDo
 @enduml
