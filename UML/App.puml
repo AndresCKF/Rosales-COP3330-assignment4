@@ -11,9 +11,8 @@ class AppController{
     saveList()
     saveAll()
     loadList()
-
 }
-class TODO{
+class ToDo{
     +String dueDate
     +String description
     +char status
@@ -32,5 +31,5 @@ class csvHandler {
 }
 App -- AppController
 AppController -- csvHandler
-csvHandler -- ToDo
+csvHandler - ToDo
 @enduml

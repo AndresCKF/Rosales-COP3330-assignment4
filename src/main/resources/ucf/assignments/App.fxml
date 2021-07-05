@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <SplitPane dividerPositions="0.14622641509433962" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <items>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="100.0">
@@ -28,7 +27,7 @@
                </VBox.margin>
             </Button>
             <Button mnemonicParsing="false" text="Load List" />
-            <Button mnemonicParsing="false" text="Save List" />
+            <Button mnemonicParsing="false" text="Save Lists" />
          </children>
          <padding>
             <Insets top="5.0" />

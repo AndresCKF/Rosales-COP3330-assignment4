@@ -4,12 +4,15 @@ import java.util.*;
 
 public class csvHandler {
 
-    public List readCSV(String filename){
-        List<ToDo> todos = new ArrayList<>();
+    public HashMap readCSVList(String filename){
+        List<ToDo> listItems = new ArrayList<>();
+        HashMap<String, List> toDoList = new HashMap<>();
         //try and open file
         //if not existent return empty List
         //use csv parser to create todos List
-        return todos;
+        //format listname, duedate, description, completion status
+        // give listname to Map key, value ToDo Object
+        return toDoList;
     }
 
     public void writeCSV(List<ToDo> todos){
@@ -19,6 +22,9 @@ public class csvHandler {
         //loop through list writing to file with commas,new line for every TODO
     }
     public void createFile(String filename){
-        //
+        //try and create new file
+        //if file success print file created
+        //if not print file already exists
+        //catch ioexception print error
     }
 }
