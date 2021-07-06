@@ -3,12 +3,13 @@
  *  *  Copyright 2021 Andres Rosales
  */
 package ucf.assignments;
-
+import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableView;
-
+import javafx.beans.value.ObservableValue;
 import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.HashMap;
@@ -26,7 +27,11 @@ public class AppController implements Initializable {
     HashMap<String, String> Archive = new HashMap<>();
 
     @FXML private TableView<ToDo> tableView;
+    @FXML private CheckBox completedCheckbox;
+    @FXML private CheckBox incompleteCheckbox;
 
+    //Table view has an editable configuration which i will use,
+    // hence no 'edit due date' or 'edit description' button
     @FXML
     public void addToDoListButton(ActionEvent actionEvent){
         ToDoList addedList = addToDoList();
@@ -122,6 +127,12 @@ public class AppController implements Initializable {
         //open prompt asking for filename
         //return ToDoList Object and filename to csvHandler.writeCSV
     }
+
+    //here I will add listener for checkboxes, completed and incomplete
+    //when unchecked, i will loop through list and if status matches unselected item, it is removed from list
+    //redisplay tableview
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //for display purposes only
