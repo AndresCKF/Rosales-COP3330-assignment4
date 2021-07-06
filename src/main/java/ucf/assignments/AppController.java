@@ -81,6 +81,8 @@ public class AppController implements Initializable {
         // check if ToDoList has filename != ""
         //if empty ask user for filename, then add it to Object param
         // call writeCSV with ToDoList object
+        //saveArchive()
+
     }
 
     @FXML
@@ -126,11 +128,16 @@ public class AppController implements Initializable {
         //get ToDoList Object from opened titledpane
         //open prompt asking for filename
         //return ToDoList Object and filename to csvHandler.writeCSV
+        //saveArchive()
     }
 
     //here I will add listener for checkboxes, completed and incomplete
     //when unchecked, i will loop through list and if status matches unselected item, it is removed from list
     //redisplay tableview
+    public void saveArchive(){
+        //loop through Archive, save to .txt as csv
+
+    }
 
 
     @Override
