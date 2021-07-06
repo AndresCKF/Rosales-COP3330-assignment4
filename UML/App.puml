@@ -15,7 +15,7 @@ class AppController{
 class ToDo{
     +String dueDate
     +String description
-    +char status
+    +String status
     +setDueDate
     +setDescription
     +setStatus
@@ -23,13 +23,19 @@ class ToDo{
     +getDescription
     +getStatus
 }
+class ToDoList{
+    +String ListName
+    +String fileName
+    +List ToDo
+}
 
 class csvHandler {
-    + readCSV(filename)
-    + writeCSV(List)
-    + createFile(filename)
+    + readCSV()
+    + writeCSV()
+    + createFile()
 }
 App -- AppController
 AppController -- csvHandler
-csvHandler - ToDo
+AppController - ToDo
+ToDo <-ToDoList
 @enduml
