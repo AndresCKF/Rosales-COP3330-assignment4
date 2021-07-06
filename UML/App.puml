@@ -9,8 +9,10 @@ class AppController{
     addList()
     removeList()
     saveList()
-    saveAll()
+    saveAllLists()
     loadList()
+    editTitle()
+
 }
 class ToDo{
     +String dueDate
